@@ -1,0 +1,3 @@
+storage/files route mein koi N+1 query ho sakta hai (jaise har file ke liye alag se DB call)
+Missing index storage collection mein (jaisa pehle analysis mein bhi mention tha)
+Ya phir same root cause: agar har request se pehle ek login bhi ho raha hai (getToken() function tumhare test mein), to bcrypt wahi dobara culprit ho sakta hai
