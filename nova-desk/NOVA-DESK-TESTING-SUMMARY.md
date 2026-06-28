@@ -15,17 +15,17 @@
 
 ## MODULES STATUS
 
-| Module | Status | Notes |
-|---|---|---|
-| Auth | Partial | Core works, 3 fixes pending |
-| Storage | Partial | Works but slow under load |
-| Portfolio | Working | 4-8ms excellent |
-| Browser | Broken | 404 — path mismatch |
-| Team | Unstable | Rewrite later |
-| AI/models | 404 | Route not implemented |
-| Notifications | Broken | Needs teamId param |
-| Search | Working | 16-19ms |
-| Coding | Not tested | CPU-heavy, needs isolation |
+| Module        | Status        | Notes 
+|---            |---            |---
+| Auth          | Partial       | Core works, 3 fixes pending 
+| Storage       | Partial       | Works but slow under load 
+| Portfolio     | Working       | 4-8ms excellent 
+| Browser       | Broken        | 404 — path mismatch 
+| Team          | Unstable      | Rewrite later 
+| AI/models     | 404           | Route not implemented 
+| Notifications | Broken        | Needs teamId param 
+| Search        | Working       | 16-19ms 
+| Coding        | Not tested    | CPU-heavy, needs isolation 
 
 ---
 
@@ -232,17 +232,17 @@ Step 8 — AI/Coding Module
 
 ## K6 SCRIPTS AVAILABLE
 
-| Script | Purpose | Notes |
-|---|---|---|
-| tests/auth/auth-smoke-test.js | 5 VU smoke | Working |
-| tests/auth/auth-registration.js | Register+Verify+Login | Working |
-| tests/auth/auth-stress-test.js | 1000 VU stress | Working |
-| tests/auth/auth-break-test.js | Breaking point | Working |
-| tests/home/home-stress-test.js | All modules | Remove broken routes |
-| tests/home/home-break-test.js | All modules break | Fix check() logic |
-| tests/api/api-load-test.js | API with token cache | Needs test users |
-| tests/api/api-break-test.js | API break | Needs test users |
-| auth-full-check.ps1 | Comprehensive PS | Updated, use this |
+| Script                            | Purpose               | Notes 
+|---                                |---                    |---
+| tests/auth/auth-smoke-test.js     | 5 VU smoke            | Working  
+| tests/auth/auth-registration.js   | Register+Verify+Login | Working 
+| tests/auth/auth-stress-test.js    | 1000 VU stress        | Working 
+| tests/auth/auth-break-test.js     | Breaking point        | Working 
+| tests/home/home-stress-test.js    | All modules           | Remove broken routes 
+| tests/home/home-break-test.js     | All modules break     | Fix check() logic 
+| tests/api/api-load-test.js        | API with token cache  | Needs test users 
+| tests/api/api-break-test.js       | API break             | Needs test users 
+| auth-full-check.ps1               | Comprehensive PS      | Updated, use this
 
 Routes to remove from home-stress-test.js until fixed:
 - /api/v1/browser/profile (404)
@@ -255,16 +255,16 @@ Routes to remove from home-stress-test.js until fixed:
 
 ## PERFORMANCE TARGETS
 
-| Endpoint | Current | Target |
-|---|---|---|
-| Register | 3000-6000ms | <400ms |
-| Verify OTP | 3000-5000ms | <300ms |
-| Login | 42-58ms | <100ms GOOD |
-| /me | 10-34ms | <50ms GOOD |
-| storage/files (load) | 10000ms+ | <500ms |
-| Search | 16-19ms | <100ms GOOD |
-| Portfolio | 4-8ms | <100ms GOOD |
-| Health check | 401 broken | 200ms public |
+| Endpoint              | Current      | Target 
+|---                    |---           |---
+| Register              | 3000-6000ms  | <400ms 
+| Verify OTP            | 3000-5000ms  | <300ms 
+| Login                 | 42-58ms      | <100ms GOOD 
+| /me                   | 10-34ms      | <50ms GOOD 
+| storage/files (load)  | 10000ms+     | <500ms 
+| Search                | 16-19ms      | <100ms GOOD 
+| Portfolio             | 4-8ms        | <100ms GOOD 
+| Health check          | 401 broken   | 200ms public 
 
 ---
 
