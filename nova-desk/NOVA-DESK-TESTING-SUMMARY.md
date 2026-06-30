@@ -127,18 +127,18 @@ Note: Portfolio aur notification ke inner routes check karo pehle — path doubl
 ## ROOT CAUSES
 
 ### 1. Register/Verify Slow (3000-6000ms, zero load)
-Wajah: Nodemailer email sending is synchronous — blocks response
+rson: Nodemailer email sending is synchronous — blocks response
 Evidence: Login = 42ms (no email), Register = 3000ms+ (has email)
 Fix: Don't await sendEmail — fire and forget or use BullMQ queue
 Expected after fix: 3000ms -> 150-300ms
 
 ### 2. Health Check 401
-Wajah: Health route defined AFTER some middleware in app.js
+rson: Health route defined AFTER some middleware in app.js
 Fix: Move health route to very top of app.js before any middleware
 Time: 5 minutes
 
 ### 3. Rate Limiting 403 not 429
-Wajah: Lockout is IP-wide — spills to authenticated routes too
+rson: Lockout is IP-wide — spills to authenticated routes too
 Evidence: Valid token requests got 403 after rate-limit test
 Fix: Apply lockout only to /login /register, not authenticated routes
 Standard: Return 429 Too Many Requests (not 403 Forbidden)
@@ -147,12 +147,12 @@ Standard: Return 429 Too Many Requests (not 403 Forbidden)
 See app.js section above — main cause of 10-35s response times
 
 ### 5. Storage Slow Under Load
-Wajah 1: Architecture bug (extra routers)
-Wajah 2: Possible N+1 queries or missing indexes in storage controller
+rson 1: Architecture bug (extra routers)
+rson 2: Possible N+1 queries or missing indexes in storage controller
 Fix: Architecture first, then re-test, then controller if still slow
 
 ### 6. Browser 404
-Wajah: Inner route path mismatch
+rson: Inner route path mismatch
 Next: Open browserRoutes file, check exact router.get() paths
 
 ---
