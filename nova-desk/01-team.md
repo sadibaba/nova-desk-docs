@@ -62,3 +62,9 @@ running (6m00.0s), 00/50 VUs, 10339 complete and 0 interrupted iterations
 team_stress_test ✓ [======================================] 00/50 VUs  6m0s
 ERRO[0360] thresholds on metrics 'http_req_failed' have been crossed
 PS C:\Users\Rizwan computers\Documents\GitHub\nova\backend>
+
+--------
+
+**Stats endpoint returns data without `success: true` wrapper** ❌
+
+(Response format mismatch - test expects `{ success: true, data: {...} }` but gets raw data)
