@@ -425,3 +425,18 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:3800
 ---
 
 *Documentation prepared for NovaDesk Platform — Search Module v1.0* 🚀
+
+
+
+
+
+PS C:\Users\Rizwan computers\Documents\GitHub\nova\backend> $r = Invoke-RestMethod -UseBasicParsing "http://localhost:3800/api/v1/search?q=cars&category=images&limit=2"; $r.data.results | ForEach-Object { Write-Host "`nTitle: $($_.title)" -ForegroundColor Yellow; Write-Host "Thumbnail: $($_.thumbnail)" -ForegroundColor Cyan; Write-Host "Engine: $($_.engine)" -ForegroundColor Gray }
+
+Title: Disney Cars 4 (2025) | Todo lo que Sabemos + Teorías - YouTube
+Thumbnail: https://i.ytimg.com/vi/f4I01G_k3qc/maxresdefault.jpg
+Engine: bing images
+
+Title: Best New Sports Cars Of 2024
+Thumbnail: https://static0.topspeedimages.com/wordpress/wp-content/uploads/2023/09/resize_dsc_0108.jpg?w=1600&h=900&fit=crop
+Engine: bing images
+PS C:\Users\Rizwan computers\Documents\GitHub\nova\backend>
