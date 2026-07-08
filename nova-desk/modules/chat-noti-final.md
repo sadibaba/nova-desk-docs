@@ -660,6 +660,7 @@ src/modules/notifications/
 
 | Module | Status |
 |--------|--------|
+| auth Module | ✅ Complete |
 | Team Module | ✅ Complete |
 | Code Module | ✅ Complete |
 | Browser Module | ✅ Complete |
