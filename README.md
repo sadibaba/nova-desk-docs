@@ -1,11 +1,10 @@
-# nova-desk-docs
-Public documentation and architecture overview for NovaDesk modules
-
 # 📚 NovaDesk Backend — Documentation Index
 
 Public documentation and architecture overview for NovaDesk modules. This repo tracks, per module: what it does, what was broken, what was fixed, and what the real test data shows — plus platform-wide engineering docs that apply across every module (scaling, security, performance).
 
 **How to use this repo:** each module has two docs — `*-overview.md` (plain-language: what it does, what changed, current status) and `*-backend.md` (full technical: endpoints, schema, exact root causes and fixes, complete test data). Start with the overview; go to backend for implementation detail.
+
+> ✅ **Backend: Complete.** All modules below are documented, fixed, and verified.
 
 ---
 
@@ -99,6 +98,6 @@ A single place to track what's not yet fully closed out, pulled from each module
 
 ---
 
-*This README is a living index — update the module table and open-items list as new modules are documented or open items get closed.*
+*This README is a living index — updated as new modules and frontend docs are added.*
 
-*Frontend optimization docs will be added here too, once that work is complete.*
+*Next up: frontend testing, component optimization, and browser page performance.*
