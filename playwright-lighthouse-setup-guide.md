@@ -4,6 +4,7 @@ This is a how-to, not a finished test suite — the goal is you understand the i
 
 ---
 
+
 ## Part 1: Playwright
 
 ### 1.1 What It's For (Recap)
