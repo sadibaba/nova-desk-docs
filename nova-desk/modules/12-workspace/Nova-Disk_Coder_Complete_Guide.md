@@ -1,6 +1,6 @@
 # Nova-Disk × Coder Integration — Complete Guide
 
-**Status:** ✅ SOLVED — code-server successfully running inside Coder workspace, accessible via iframe.
+**Status:**  SOLVED — code-server successfully running inside Coder workspace, accessible via iframe.
 **Date:** September 26, 2026
 **Developer:** Saad (sadibaba)
 
