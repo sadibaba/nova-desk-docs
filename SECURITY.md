@@ -2,7 +2,7 @@
 
 ## Contact
 
-Report suspected vulnerabilities to ``.
+Report suspected vulnerabilities to `support@nova-desk.online`.
 
 Use the public safety form at `/legal/report` for content, user, copyright,
 or non-sensitive bug reports. Do not include credentials, private keys, or
