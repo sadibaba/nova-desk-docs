@@ -1,5 +1,6 @@
 # 00 - Executive Overview
 
+
 ## What NovaDesk is
 
 NovaDesk is a browser-based developer workspace aimed at students and small
