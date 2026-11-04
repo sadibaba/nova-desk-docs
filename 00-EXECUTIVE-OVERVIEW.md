@@ -87,6 +87,7 @@ The main gaps are operational, not cosmetic:
 
 ## Honest verdict
 
+
 - As a portfolio and interview project: **strong**.
 - As a private beta: **close, after 4-6 weeks of hardening**.
 - As a public commercial product: **not yet**, but the foundation is real.
