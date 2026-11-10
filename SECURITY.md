@@ -97,6 +97,17 @@ bug bounty.
 - Which regulator, court, or law-enforcement contact applies?
 - Who approves the public statement?
 
+## Current platform controls
+
+- Render is the auth/user/data authority; the VM is IDE-only.
+- IDE containers run as a non-root user with dropped capabilities, no Docker
+  socket, resource limits and a private per-user network.
+- Registration is restricted to `@gmail.com`; disposable domains are rejected.
+- Secrets belong in platform environment variables, never in Git or docs.
+- Cloudinary is required for durable images; Render local disk is ephemeral.
+- The VM is a single point of failure for the IDE; login remains available
+  without it.
+
 ## Known limitation
 
 NovaDesk is not end-to-end encrypted. Operators may be able to access stored
